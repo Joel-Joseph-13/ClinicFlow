@@ -72,7 +72,7 @@ export const PatientForm = () => {
           control={form.control}
           name="email"
           label="Email"
-          placeholder="joel1family2.com"
+          placeholder="joel1family2@gmail.com"
           iconSrc="/assets/icons/email.svg"
           iconAlt="email"
         />

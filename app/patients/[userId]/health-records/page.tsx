@@ -1,11 +1,14 @@
 import Image from "next/image";
-
-import { AppointmentForm } from "@/components/forms/AppointmentForm";
 import { getPatient } from "@/lib/actions/patient.actions";
-import { DoctorSuggestionQuestionnaire } from "@/components/SymptomsQuestionnaire";
-import Link from "next/link";
+import { HealthRecordsForm } from "@/components/forms/HealthRecordsForm";
 
-const Appointment = async ({ params: { userId } }: SearchParamProps) => {
+interface SearchParamProps {
+  params: {
+    userId: string;
+  };
+}
+
+const HealthRecords = async ({ params: { userId } }: SearchParamProps) => {
   const patient = await getPatient(userId);
 
   return (
@@ -19,16 +22,8 @@ const Appointment = async ({ params: { userId } }: SearchParamProps) => {
             alt="logo"
             className="mb-12 h-10 w-fit"
           />
-          <DoctorSuggestionQuestionnaire />
-          <AppointmentForm
-            patientId={patient?.$id}
-            userId={userId}
-            type="create"
-          />
 
-          <Link href="/health-records" className="text-green-500 text-xs">
-            Want to know about your Current Vaccinations/Medicines
-          </Link>
+          <HealthRecordsForm patientId={patient?.$id} userId={userId} />
 
           <p className="copyright mt-10 py-12">© 2024 ClinicFlow</p>
         </div>
@@ -36,8 +31,8 @@ const Appointment = async ({ params: { userId } }: SearchParamProps) => {
 
       <Image
         src="/assets/images/appointment-img.png"
-        height={2000}
-        width={4000}
+        height={1500}
+        width={1500}
         alt="appointment"
         className="side-img max-w-[390px] bg-bottom"
       />
@@ -45,4 +40,4 @@ const Appointment = async ({ params: { userId } }: SearchParamProps) => {
   );
 };
 
-export default Appointment;
+export default HealthRecords;
