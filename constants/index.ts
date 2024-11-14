@@ -6,7 +6,7 @@ export const PatientFormDefaultValues = {
   email: "",
   phone: "",
   birthDate: new Date(Date.now()),
-  gender: "Male" as Gender,
+  gender: "male" as Gender,
   address: "",
   occupation: "",
   emergencyContactName: "",
@@ -41,61 +41,61 @@ export const IdentificationTypes = [
 ];
 
 export const Doctors = [
-    {
-      image: "/assets/images/dr-joel.png",
-      name: "Joel Joseph",
-      specialization: "Cardiology", // Heart health specialist
-      available: true,
-    },
-    {
-      image: "/assets/images/dr-azad.png",
-      name: "Azad Sebastian",
-      specialization: "Dermatology", // Skin, hair, and nail specialist
-      available: true,
-    },
-    {
-      image: "/assets/images/dr-jobel.png",
-      name: "Jobel Eapen",
-      specialization: "Pediatrics", // Children's health specialist
-      available: true,
-    },
-    {
-      image: "/assets/images/dr-shubham.png",
-      name: "Shubham Handore",
-      specialization: "Orthopedics", // Bone, joint, and muscle specialist
-      available: true,
-    },
-    {
-      image: "/assets/images/dr-alen.png",
-      name: "Alen Jojo",
-      specialization: "Neurology", // Brain and nervous system specialist
-      available: true,
-    },
-    {
-      image: "/assets/images/dr-davis.png",
-      name: "Davis Thomas",
-      specialization: "Gastroenterology", // Digestive system specialist
-      available: true,
-    },
-    {
-      image: "/assets/images/dr-hari.png",
-      name: "Hari VM",
-      specialization: "Psychiatry", // Mental health specialist
-      available: true,
-    },
-    {
-      image: "/assets/images/dr-ajish.png",
-      name: "Ajish",
-      specialization: "Pulmonology", // Respiratory health specialist
-      available: true,
-    },
-    {
-      image: "/assets/images/dr-adhil.png",
-      name: "M.Adhil",
-      specialization: "Endocrinology", // Hormone and gland specialist
-      available: true,
-    },
-  ];  
+  {
+    image: "/assets/images/dr-joel.png",
+    name: "Joel Joseph",
+    specialization: "Cardiology", // Heart health specialist
+    available: true,
+  },
+  {
+    image: "/assets/images/dr-azad.png",
+    name: "Azad Sebastian",
+    specialization: "Dermatology", // Skin, hair, and nail specialist
+    available: true,
+  },
+  {
+    image: "/assets/images/dr-jobel.png",
+    name: "Jobel Eapen",
+    specialization: "Pediatrics", // Children's health specialist
+    available: true,
+  },
+  {
+    image: "/assets/images/dr-shubham.png",
+    name: "Shubham Handore",
+    specialization: "Orthopedics", // Bone, joint, and muscle specialist
+    available: true,
+  },
+  {
+    image: "/assets/images/dr-alen.png",
+    name: "Alen Jojo",
+    specialization: "Neurology", // Brain and nervous system specialist
+    available: true,
+  },
+  {
+    image: "/assets/images/dr-davis.png",
+    name: "Davis Thomas",
+    specialization: "Gastroenterology", // Digestive system specialist
+    available: true,
+  },
+  {
+    image: "/assets/images/dr-hari.png",
+    name: "Hari VM",
+    specialization: "Psychiatry", // Mental health specialist
+    available: true,
+  },
+  {
+    image: "/assets/images/dr-ajish.png",
+    name: "Ajish",
+    specialization: "Pulmonology", // Respiratory health specialist
+    available: true,
+  },
+  {
+    image: "/assets/images/dr-adhil.png",
+    name: "M.Adhil",
+    specialization: "Endocrinology", // Hormone and gland specialist
+    available: true,
+  },
+];
 
 export const StatusIcon = {
   scheduled: "/assets/icons/check.svg",

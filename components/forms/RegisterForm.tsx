@@ -26,7 +26,7 @@ import CustomFormField, { FormFieldType } from "../CustomFormField";
 import { FileUploader } from "../FileUploader";
 import SubmitButton from "../SubmitButton";
 
-const RegisterForm = ({ user }: { user: User }) => {
+export const RegisterForm = ({ user }: { user: User }) => {
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
 
@@ -231,24 +231,27 @@ const RegisterForm = ({ user }: { user: User }) => {
             name="PrimaryPhysician"
             label="Primary Physician"
             placeholder="Select a physician"
-            >
-              {Doctors.map((doctor) => (
-                <SelectItem key={doctor.name} value={doctor.name}>
-                  <div className="flex items-center gap-2 cursor-pointer">
-                    <Image 
-                      src={doctor.image}
-                      width={38}
-                      height={38}
-                      alt={doctor.name}
-                      className="rounded-full border border-dark-500"
-                    />
+          >
+            {Doctors.map((doctor) => (
+              <SelectItem key={doctor.name} value={doctor.name}>
+                <div className="flex items-center gap-2 cursor-pointer">
+                  <Image
+                    src={doctor.image}
+                    width={38}
+                    height={38}
+                    alt={doctor.name}
+                    className="rounded-full border border-dark-500"
+                  />
                   <div>
                     <p>{doctor.name}</p>
-                    <p className="text-sm text-gray-500">{doctor.specialization}</p> {/* Display specialization */}
+                    <p className="text-sm text-gray-500">
+                      {doctor.specialization}
+                    </p>{" "}
+                    {/* Display specialization */}
                   </div>
                 </div>
-                </SelectItem>
-              ))}
+              </SelectItem>
+            ))}
           </CustomFormField>
 
           {/* INSURANCE & POLICY NUMBER */}
