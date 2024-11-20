@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Checkbox } from "@/components/ui/checkbox";
@@ -165,9 +166,9 @@ export function DoctorSuggestionQuestionnaire() {
         <CardTitle>Symptom Questionnaire - Round {currentSet + 1}</CardTitle>
       </CardHeader>
       <CardContent>
-        <p className="mb-4">Please select all symptoms that apply:</p>
-        {symptomSets[currentSet].map((symptom) => (
-          <div key={symptom.id} className="flex items-center space-x-2 mb-2">
+          <p className="mb-4">Please select all symptoms that apply:</p>
+          {symptomSets[currentSet].map((symptom) => (
+          <div key={symptom.id} className="mb-2 flex items-center space-x-2">
             <Checkbox
               checked={!!selectedSymptoms[symptom.id]}
               onCheckedChange={(isSelected) =>
@@ -175,13 +176,11 @@ export function DoctorSuggestionQuestionnaire() {
               }
             id={symptom.id}
             />
-            <Label htmlFor={symptom.id}>{symptom.question}</Label>
+          <Label htmlFor={symptom.id}>{symptom.question}</Label>
           </div>
-        ))}
+  ))}
         <Button onClick={handleNextSet} className="mt-4">
-          {currentSet < symptomSets.length - 1
-            ? "Next"
-            : "Get Suggested Doctors"}
+          {currentSet < symptomSets.length - 1 ? "Next" : "Get Suggested Doctors"}
         </Button>
       </CardContent>
     </Card>

@@ -1,6 +1,9 @@
-import PetForm from "@/components/forms/PetForm";
 import Image from "next/image";
 import Link from "next/link";
+
+import PetForm from "@/components/forms/PetForm";
+
+
 
 export default function PetsPage() {
   return (
@@ -38,11 +41,12 @@ export default function PetsPage() {
           height={1000}
           width={1000}
           alt="Veterinarian attending to a dog"
-          className="h-full w-full object-cover"
+          className="size-full object-cover"
           priority={false}
           loading="lazy"
         />
       </section>
+
     </main>
   );
 }

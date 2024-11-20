@@ -25,17 +25,18 @@ const Home = ({ searchParams }: SearchParamProps) => {
 
           <div className="text-14-regular mt-20 flex flex-col items-center gap-4 xl:flex-row xl:justify-between">
             <p className="text-dark-600 text-center xl:text-left">
-                © 2024 ClinicFlow
+              © 2024 ClinicFlow
             </p>
           <div className="flex flex-col items-center gap-2 xl:flex-row xl:gap-4">
-            <Link href="/pets" className="text-green-500 text-xs text-center xl:text-left">
-              Ensure your loyal companion gets the care they deserve – click here for pet healthcare
-            </Link>
-            <Link href="/?admin=true" className="text-green-500 text-xs text-center xl:text-left">
-              Admin
-            </Link>
+          <Link href="/pets" className="text-xs text-center text-green-500 xl:text-left">
+            Ensure your loyal companion gets the care they deserve – click here for pet healthcare
+          </Link>
+          <Link href="/?admin=true" className="text-xs text-center text-green-500 xl:text-left">
+            Admin
+          </Link>
           </div>
           </div>
+
 
         </div>
       </section>
